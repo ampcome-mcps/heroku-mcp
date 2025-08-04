@@ -74,8 +74,8 @@
     "url": "git+https://github.com/heroku/heroku-mcp-server.git"
   },
   "scripts": {
-    "build": "rm -rf dist && tsc -p tsconfig.json && npm run exec-perms",
-    "build:dev": "rm -rf dist && tsc --sourceMap -p tsconfig.json && npm run exec-perms",
+    "build": "shx rm -rf dist && tsc -p tsconfig.json && npm run exec-perms",
+    "build:dev": "shx rm -rf dist && tsc --sourceMap -p tsconfig.json && npm run exec-perms",
     "build:watch": "tsc --sourceMap -p tsconfig.json -w",
     "build:dxt": "npx @anthropic-ai/dxt pack",
     "start:dev": "npm run build:dev && npm link && npx @modelcontextprotocol/inspector heroku-mcp-server",
