@@ -83,7 +83,7 @@
     "format": "prettier . --write --config ./.prettier.mjs",
     "lint": "cd src && eslint ./",
     "posttest": "npm run lint",
-    "prepare": "husky",
+    "prepare": "npm run build",
     "pretest": "npm run build",
     "type-check": "tsc --noEmit",
     "test": "nyc mocha --forbid-only --loader=ts-node/esm",
